@@ -10,6 +10,7 @@
 		8FD872D01C75A38200181FA6 /* Brightness.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD872CF1C75A38200181FA6 /* Brightness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FD872D71C75A38300181FA6 /* Brightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD872CC1C75A38200181FA6 /* Brightness.framework */; };
 		8FD872DC1C75A38300181FA6 /* BrightnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD872DB1C75A38300181FA6 /* BrightnessTests.swift */; };
+		8FD872E71C75A3CF00181FA6 /* Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD872E61C75A3CF00181FA6 /* Brightness.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8FD872D61C75A38300181FA6 /* BrightnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrightnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD872DB1C75A38300181FA6 /* BrightnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessTests.swift; sourceTree = "<group>"; };
 		8FD872DD1C75A38300181FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FD872E61C75A3CF00181FA6 /* Brightness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brightness.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				8FD872CF1C75A38200181FA6 /* Brightness.h */,
 				8FD872D11C75A38200181FA6 /* Info.plist */,
+				8FD872E61C75A3CF00181FA6 /* Brightness.swift */,
 			);
 			path = Brightness;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD872E71C75A3CF00181FA6 /* Brightness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		8FD872E11C75A38300181FA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Brightness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8FD872E21C75A38300181FA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
