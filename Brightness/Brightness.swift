@@ -7,9 +7,30 @@
 //
 
 import Foundation
+import Animation
+import Interpolation
 
 // MARK: - Brightness
 
+public extension UIScreen
+{
+    func setBrightness(brightness: CGFloat,
+        duration:Double = 1,
+        timingFunction: TimingFunction = .QuadraticEaseInOut,
+        completion: (Bool -> ())? = nil)
+    {
+        let brightnessBefore = self.brightness
+        
+        Animator.animate(duration,
+            delay: 0,
+            timingFunction: timingFunction,
+            closure: { self.brightness = (brightnessBefore, brightness) ◊ CGFloat($0) },
+            completion: completion)
+    }
+}
+
+// MARK: - Brightness
+/*
 extension UIViewController
 {
     var brightnessManager : BrightnessManager { return BrightnessManager.sharedBrightnessManager }
@@ -205,3 +226,4 @@ public func setBrightness(brightness: CGFloat, duration: Double)
 {
     brightnessAnimator.animateFloat(Float(brightness), duration:duration)
 }
+*/
